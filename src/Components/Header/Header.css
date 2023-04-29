@@ -1,0 +1,63 @@
+.Header {
+    display: flex;
+    width: 100%;
+    height: 60px;
+    background-color: rgb(169, 59, 12);
+    align-items: center;
+    justify-content: space-between;
+}
+
+.HeaderTitle {
+    margin-top: 15px;
+    margin-left: 15px;
+}
+
+.CartButton {
+    width: 200px;
+    padding-bottom: 5px;
+    border: none;
+    color: white;
+    font-weight: 500;
+    font-size: 16px;
+    margin-right: 15px;
+    border-radius: 15px;
+    background-color: rgb(98, 10, 9);
+}
+
+.ModalAddAndMinusButton {
+    color: rgb(169, 59, 12);
+}
+
+.ModalAddAndMinusButton:hover {
+    background-color: rgb(169, 59, 12);
+    color: aliceblue;
+}
+
+.OrderAmountSpan {
+    background-color: rgb(169, 59, 12)
+}
+
+.OrderAmountSpan {
+    background-color: rgb(169, 59, 12);
+    color: aliceblue;
+}
+
+
+.CartButton:hover {
+    background-color: aliceblue;
+    color: rgb(98, 10, 9);
+}
+
+.OrderModal .ant-list .ant-list-item {
+    padding: 0;
+}
+
+@media (max-width: 1200px) {
+    .Header {
+        height: 45px;
+    }
+
+    .CartButton {
+        width: 150px;
+    }
+}

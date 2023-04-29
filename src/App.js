@@ -1,23 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+import "./App.css";
+import Header from "./Components/Header/Header";
+import AddBoard from "./Components/PageContent/AddBoard/AddBoard";
+import OrderContext from "./Context/order-context";
 
 function App() {
+  const [ordering, setOrdering] = useState([]);
+  const [orderCount, setOnOrderCount] = useState(0);
+  const onOrderChange = (ordering, orderCount) => {
+    setOrdering(ordering);
+    setOnOrderCount(orderCount);
+  };
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <OrderContext.Provider
+        value={{ ordering: ordering, orderCount: orderCount }}>
+        <Header />
+        <AddBoard onOrderChange={onOrderChange} />
+      </OrderContext.Provider>
     </div>
   );
 }

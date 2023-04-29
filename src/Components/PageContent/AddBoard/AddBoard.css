@@ -1,0 +1,70 @@
+.MainAddBoard {
+    height: 40%;
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    background-image: url('/public/Images/turkish-cuisine-family-feast-flat-lay-people-celebrating-lamb-chops-quince-bean-salad-babaganush-rice-pilav-pumpkin-168635048.jpg');
+}
+
+.MainAddBoard:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    border-style: solid;
+    border-width: 0 0 70px 1350px;
+    border-color: transparent transparent #282c34 transparent;
+}
+
+.AddBoard {
+    z-index: 1;
+    width: 70%;
+    height: 50%;
+    margin-top: 10%;
+}
+
+.ant-card .ant-card-body {
+    padding: 10px;
+    border-radius: 0 0 8px 8px;
+}
+
+.AddButton {
+    width: 100px;
+    padding-bottom: 5px;
+    border: none;
+    color: white;
+    font-weight: 700;
+    font-size: 14px;
+    margin-left: 10px;
+    border-radius: 15px;
+    background-color: rgb(169, 59, 12);
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 10px 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+@media (max-width : 1200px) {
+    .MainAddBoard {
+        height: 30%;
+    }
+
+    .AddBoard {
+        width: 90%;
+        margin-top: 5%;
+        height: 30%;
+    }
+}
